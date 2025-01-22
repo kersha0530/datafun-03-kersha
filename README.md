@@ -1,7 +1,6 @@
-# datafun-03-kersha
+# datafun-03-project
 CC3.1: Create a Local Project Virtual Environment
 
-# datafun-03-project
 
 ## Create Project Virtual Environment
 
