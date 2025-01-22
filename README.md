@@ -21,3 +21,16 @@ git add .
 git commit -m "add .gitignore, cmds to readme"
 git push -u origin main
 ```
+# Rename repo
+
+```shell
+git add .
+git commit -m "change repo name to datafun-03-project/remove kersha" 
+git push -u origin main
+
+
+# Update readme to document changes
+```shell
+git add .
+git commit -m "update read me with name change" 
+git push -u origin main
