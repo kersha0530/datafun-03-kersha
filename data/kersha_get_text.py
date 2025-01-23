@@ -1,10 +1,8 @@
 """
-Processes a text file containing car data or other structured data and generates metrics.
+Fetches or generates a text file and saves it to the "example_data" folder.
 
-The function reads a plain text file, processes the data to extract meaningful information,
-and calculates metrics such as word counts, line counts, and character counts.
-
-The results are then saved to a new text file in the "data_processed" directory.
+The function creates a sample text file if no URL is provided or fetches a file from the web.
+The saved file can then be used for processing with `kersha_process_text.py`.
 
 Args:
     None
@@ -12,40 +10,32 @@ Args:
 Returns:
     None
 """
+import pandas as pd
 import os
-import requests
 
-def get_text_file():
-    # Input: URL for text file or None to generate a sample
-    url = None  # Example: "https://example.com/sample.txt"
-
-    # Output path
+def save_mtcars_as_text():
+    # Input and output paths
+    input_file = "example_data/mtcars.csv"  # Path to the CSV file
     output_folder = "example_data"
-    os.makedirs(output_folder, exist_ok=True)
-    output_file = os.path.join(output_folder, "sample.txt")
+    os.makedirs(output_folder, exist_ok=True)  # Ensure the folder exists
+    output_file = os.path.join(output_folder, "mtcars.txt")  # Output text file
 
     try:
-        if url:
-            # Fetch text file from the URL
-            response = requests.get(url)
-            if response.status_code == 200:
-                with open(output_file, "w") as file:
-                    file.write(response.text)
-                print(f"Text file fetched successfully and saved at {output_file}.")
-            else:
-                print(f"Failed to fetch text file. HTTP Status Code: {response.status_code}")
-        else:
-            # Generate a sample text file
-            sample_text = """The quick brown fox jumps over the lazy dog.
-Python is fun and powerful for data processing.
-This is a sample text file for processing."""
-            with open(output_file, "w") as file:
-                file.write(sample_text)
-            print(f"Sample text file generated and saved at {output_file}.")
+        # Read the CSV file
+        data = pd.read_csv(input_file)
+
+        # Save as a text file
+        with open(output_file, "w") as file:
+            file.write(data.to_string(index=False))
+        
+        print(f"Text file saved successfully at {output_file}.")
+    except FileNotFoundError:
+        print(f"Error: The file {input_file} does not exist.")
     except Exception as e:
         print(f"An error occurred: {e}")
 
 if __name__ == "__main__":
-    get_text_file()
+    save_mtcars_as_text()
+
 
 
