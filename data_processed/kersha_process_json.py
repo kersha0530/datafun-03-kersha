@@ -1,3 +1,20 @@
+"""
+Processes a JSON file containing car data and generates various metrics about the data.
+
+The function reads a JSON file containing car data, converts it to a Pandas DataFrame, and calculates the following metrics:
+- Average MPG
+- Median weight
+- Maximum horsepower
+- Count of manual and automatic transmissions
+
+The calculated metrics are then saved to a new JSON file in the "data_processed" directory.
+
+Args:
+    None
+
+Returns:
+    None
+"""
 import json
 import os
 import pandas as pd
@@ -28,12 +45,13 @@ def process_json():
         automatic_transmission = transmission_counts.get(0, 0)  # Automatic (0)
 
         # Save all metrics
+        # Convert to JSON-serializable types
         processed_data = [
-            {"Metric": "Average MPG", "Value": average_mpg},
-            {"Metric": "Median Weight", "Value": median_weight},
-            {"Metric": "Max Horsepower", "Value": max_hp},
-            {"Metric": "Manual Transmission Count", "Value": manual_transmission},
-            {"Metric": "Automatic Transmission Count", "Value": automatic_transmission},
+            {"Metric": "Average MPG", "Value": float(average_mpg)},
+            {"Metric": "Median Weight", "Value": float(median_weight)},
+            {"Metric": "Max Horsepower", "Value": int(max_hp)},
+            {"Metric": "Manual Transmission Count", "Value": int(manual_transmission)},
+            {"Metric": "Automatic Transmission Count", "Value": int(automatic_transmission)},
         ]
 
         # Save the results to a JSON file
@@ -48,5 +66,6 @@ def process_json():
 
 if __name__ == "__main__":
     process_json()
+
 
 
