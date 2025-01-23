@@ -1,16 +1,40 @@
 import json
+import os
 import pandas as pd
 
-# Read JSON
-json_file = 'fetch_scripts/data.json'  # Replace with your actual JSON file path
-with open(json_file, 'r') as file:
-    data = json.load(file)
+def process_json():
+    # Input and output paths
+    input_file = "example_data/mtcars.json"
+    output_folder = "data_processed"
+    os.makedirs(output_folder, exist_ok=True)
+    output_file = os.path.join(output_folder, "processed_mtcars.json")
 
-# Example Metric: Count the number of keys
-key_count = len(data)
+    try:
+        # Load the JSON data
+        with open(input_file, "r") as file:
+            data_json = json.load(file)
 
-# Save Result
-result = pd.DataFrame({'Metric': ['Key Count'], 'Value': [key_count]})
-result.to_json('data_processed/processed_json.json', orient='records')
+        # Convert JSON to a DataFrame for processing
+        data = pd.DataFrame(data_json)
 
-print("JSON file processed and saved in data_processed/processed_json.json")
+        # Example Metric: Calculate the average MPG
+        average_mpg = data["mpg"].mean()
+
+        # Save the processed data
+        processed_data = {
+            "Metric": "Average MPG",
+            "Value": average_mpg
+        }
+
+        with open(output_file, "w") as file:
+            json.dump(processed_data, file, indent=4)
+
+        print(f"Processed data saved successfully at {output_file}.")
+    except FileNotFoundError:
+        print(f"Error: The file {input_file} does not exist.")
+    except Exception as e:
+        print(f"An error occurred: {e}")
+
+if __name__ == "__main__":
+    process_json()
+
