@@ -17,15 +17,26 @@ def process_json():
         # Convert JSON to a DataFrame for processing
         data = pd.DataFrame(data_json)
 
-        # Example Metric: Calculate the average MPG
-        average_mpg = data["mpg"].mean()
+        # Metrics
+        average_mpg = data["mpg"].mean()  # Average MPG
+        median_weight = data["wt"].median()  # Median weight
+        max_hp = data["hp"].max()  # Maximum horsepower
 
-        # Save the processed data
-        processed_data = {
-            "Metric": "Average MPG",
-            "Value": average_mpg
-        }
+        # Transmission counts
+        transmission_counts = data["am"].value_counts().to_dict()  # Count of transmission types
+        manual_transmission = transmission_counts.get(1, 0)  # Manual (1)
+        automatic_transmission = transmission_counts.get(0, 0)  # Automatic (0)
 
+        # Save all metrics
+        processed_data = [
+            {"Metric": "Average MPG", "Value": average_mpg},
+            {"Metric": "Median Weight", "Value": median_weight},
+            {"Metric": "Max Horsepower", "Value": max_hp},
+            {"Metric": "Manual Transmission Count", "Value": manual_transmission},
+            {"Metric": "Automatic Transmission Count", "Value": automatic_transmission},
+        ]
+
+        # Save the results to a JSON file
         with open(output_file, "w") as file:
             json.dump(processed_data, file, indent=4)
 
@@ -37,4 +48,5 @@ def process_json():
 
 if __name__ == "__main__":
     process_json()
+
 
