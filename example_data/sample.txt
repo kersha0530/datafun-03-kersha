@@ -1,0 +1,3 @@
+The quick brown fox jumps over the lazy dog.
+Python is fun and powerful for data processing.
+This is a sample text file for processing.
