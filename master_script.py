@@ -1,4 +1,5 @@
 import os
+import subprocess
 from utils_logger import logger  # Import the Loguru logger
 
 # Paths to your scripts
@@ -18,11 +19,19 @@ process_scripts = [
 
 def run_script(script_path):
     """
-    Executes a Python script and logs its output.
+    Executes a Python script as a subprocess and logs its output.
     """
     try:
         logger.info(f"Running script: {script_path}")
-        exec(open(script_path).read())
+        result = subprocess.run(
+            ["python", script_path],  # It's "python" or "py" depending on your environment
+            capture_output=True,
+            text=True
+        )
+        # Log stdout and stderr
+        logger.info(f"Output from {script_path}:\n{result.stdout}")
+        if result.stderr:
+            logger.error(f"Error output from {script_path}:\n{result.stderr}")
         logger.info(f"Completed script: {script_path}")
     except Exception as e:
         logger.error(f"Error running script {script_path}: {e}")
@@ -37,5 +46,6 @@ if __name__ == "__main__":
         run_script(script)
 
     logger.info("All scripts completed successfully.")
+
 
 
