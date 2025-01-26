@@ -1,0 +1,22 @@
+[
+    {
+        "Metric": "Average MPG",
+        "Value": 4.4347697262865164
+    },
+    {
+        "Metric": "Median Weight",
+        "Value": 3.325
+    },
+    {
+        "Metric": "Max Horsepower",
+        "Value": 335.0
+    },
+    {
+        "Metric": "Manual Transmission",
+        "Value": 13.0
+    },
+    {
+        "Metric": "Automatic Transmission",
+        "Value": 19.0
+    }
+]

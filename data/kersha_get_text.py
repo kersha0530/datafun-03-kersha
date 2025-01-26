@@ -1,24 +1,33 @@
-import pandas as pd
+import sys
 import os
-from utils_logger import logger  # Import the logger
+import pandas as pd
+
+# Add the root project directory to sys.path
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
+
+print("\n".join(sys.path))  # Debugger: Print all paths Python searches for modules
+
+
+from utils_logger import logger  # Import the logger for detailed logging
+
 
 def save_mtcars_as_text():
     """
     Fetches or generates a text file and saves it to the "example_data" folder.
     Also calculates and displays metrics for the saved text file.
-    
-    Metrics:
-    - Total lines
-    - Total words
-    - Total characters
     """
-    # Input and output paths
-    input_file = "example_data/mtcars.csv"  # Path to the CSV file
-    output_folder = "example_data"
+    # Paths setup
+    script_dir = os.path.dirname(os.path.abspath(__file__))
+    input_file = os.path.join(script_dir, "example_data", "mtcars.csv")  # Path to the CSV file
+    output_folder = os.path.join(script_dir, "example_data")
     os.makedirs(output_folder, exist_ok=True)  # Ensure the folder exists
     logger.info(f"Ensured the output folder exists at {output_folder}.")
     output_file = os.path.join(output_folder, "mtcars.txt")  # Output text file
     logger.info(f"Output file path set to {output_file}.")
+
+    if not os.path.exists(input_file):
+        logger.warning(f"The file {input_file} does not exist.")
+        return
 
     try:
         # Read the CSV file
@@ -33,20 +42,16 @@ def save_mtcars_as_text():
 
         # Calculate and display text metrics
         calculate_text_metrics(output_file)
-    except FileNotFoundError:
-        logger.error(f"Error: The file {input_file} does not exist.")
     except Exception as e:
-        logger.error(f"An error occurred: {e}")
+        logger.error(f"An error occurred: {e}", exc_info=True)
+
 
 def calculate_text_metrics(file_path):
     """
-    This script calculates and logs and displays metrics for a given text file.
+    This script calculates and logs metrics for a given text file.
 
     Args:
         file_path (str): Path to the text file.
-
-    Returns:
-        None
     """
     try:
         # Read the text file
@@ -71,13 +76,13 @@ def calculate_text_metrics(file_path):
         print(f"Total Words: {total_words}")
         print(f"Total Characters: {total_characters}")
     except Exception as e:
-        logger.error(f"An error occurred while processing the text file: {e}")
+        logger.error(f"An error occurred while processing the text file: {e}", exc_info=True)
+
 
 if __name__ == "__main__":
     logger.info("Starting save_mtcars_as_text script.")
-    save_mtcars_as_text()
-    logger.info("save_mtcars_as_text script completed.")
-
-
-
-
+    try:
+        save_mtcars_as_text()
+        logger.info("save_mtcars_as_text script completed successfully.")
+    except Exception as e:
+        logger.error(f"Unexpected error: {e}", exc_info=True)

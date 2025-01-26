@@ -1,5 +1,7 @@
 import pandas as pd
 import os
+import requests
+
 
 def process_csv():
     # Input and output file paths

@@ -1,3 +1,4 @@
+
 """
 Processes a JSON file containing car data and generates various metrics about the data.
 
@@ -18,6 +19,7 @@ Returns:
 import json
 import os
 import pandas as pd
+
 
 def process_json():
     # Input and output paths

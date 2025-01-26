@@ -14,6 +14,7 @@ Returns:
 """
 import os
 
+
 def process_text():
     # Input and output paths
     input_file = "example_data/sample.txt"  # Adjust this path to your text file
