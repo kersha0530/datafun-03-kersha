@@ -1,0 +1,5 @@
+Processed Text Metrics:
+-----------------------
+Total Lines: 33
+Total Words: 530
+Total Characters: 3563
