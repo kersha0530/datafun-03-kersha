@@ -1,0 +1,48 @@
+2025-01-26 11:18:20.768 | INFO     | utils_logger:<module>:41 - Logging to file: logs\project_log.log
+2025-01-26 11:18:20.770 | INFO     | __main__:<module>:91 - Starting fetch_and_save_excel script.
+2025-01-26 11:18:20.770 | INFO     | __main__:fetch_and_save_excel:28 - Ensured the output folder exists at C:\44608 projects spring 2025\datafun-03-projects\data\example_data.
+2025-01-26 11:18:20.770 | INFO     | __main__:fetch_and_save_excel:30 - Output file path set to C:\44608 projects spring 2025\datafun-03-projects\data\example_data\mtcars.xlsx.
+2025-01-26 11:18:20.771 | INFO     | __main__:fetch_and_save_excel:34 - Attempting to fetch dataset from https://raw.githubusercontent.com/selva86/datasets/master/mtcars.csv.
+2025-01-26 11:18:20.959 | INFO     | __main__:fetch_and_save_excel:39 - Dataset fetched successfully.
+2025-01-26 11:18:21.095 | INFO     | __main__:fetch_and_save_excel:43 - Excel file created and saved successfully at C:\44608 projects spring 2025\datafun-03-projects\data\example_data\mtcars.xlsx.
+2025-01-26 11:18:21.105 | INFO     | __main__:log_excel_metrics:72 - Excel Metrics:
+2025-01-26 11:18:21.106 | INFO     | __main__:log_excel_metrics:73 - -----------------------
+2025-01-26 11:18:21.106 | INFO     | __main__:log_excel_metrics:74 - Total Rows: 32
+2025-01-26 11:18:21.106 | INFO     | __main__:log_excel_metrics:75 - Total Columns: 14
+2025-01-26 11:18:21.106 | INFO     | __main__:log_excel_metrics:76 - Numeric Summaries: {'mpg': {'count': 32.0, 'mean': 4.4347697262865164, 'std': 0.6611368311355733, 'min': 3.22490309931942, '25%': 3.92743238723533, '50%': 4.38178046004133, '75%': 4.77493455452533, 'max': 5.82237065120385}, 'cyl': {'count': 32.0, 'mean': 6.1875, 'std': 1.7859216469465444, 'min': 4.0, '25%': 4.0, '50%': 6.0, '75%': 8.0, 'max': 8.0}, 'disp': {'count': 32.0, 'mean': 230.72187499999998, 'std': 123.93869383138194, 'min': 71.1, '25%': 120.825, '50%': 196.3, '75%': 326.0, 'max': 472.0}, 'hp': {'count': 32.0, 'mean': 146.6875, 'std': 68.56286848932059, 'min': 52.0, '25%': 96.5, '50%': 123.0, '75%': 180.0, 'max': 335.0}, 'drat': {'count': 32.0, 'mean': 3.5965625, 'std': 0.5346787360709715, 'min': 2.76, '25%': 3.08, '50%': 3.6950000000000003, '75%': 3.92, 'max': 4.93}, 'wt': {'count': 32.0, 'mean': 3.2172500000000004, 'std': 0.9784574429896966, 'min': 1.513, '25%': 2.58125, '50%': 3.325, '75%': 3.61, 'max': 5.424}, 'qsec': {'count': 32.0, 'mean': 17.848750000000003, 'std': 1.7869432360968431, 'min': 14.5, '25%': 16.8925, '50%': 17.71, '75%': 18.9, 'max': 22.9}, 'vs': {'count': 32.0, 'mean': 0.4375, 'std': 0.5040161287741853, 'min': 0.0, '25%': 0.0, '50%': 0.0, '75%': 1.0, 'max': 1.0}, 'am': {'count': 32.0, 'mean': 0.40625, 'std': 0.49899091723584604, 'min': 0.0, '25%': 0.0, '50%': 0.0, '75%': 1.0, 'max': 1.0}, 'gear': {'count': 32.0, 'mean': 3.6875, 'std': 0.7378040652569471, 'min': 3.0, '25%': 3.0, '50%': 4.0, '75%': 4.0, 'max': 5.0}, 'carb': {'count': 32.0, 'mean': 2.8125, 'std': 1.6151999776318522, 'min': 1.0, '25%': 2.0, '50%': 2.0, '75%': 4.0, 'max': 8.0}, 'fast': {'count': 32.0, 'mean': 0.6875, 'std': 0.47092907485988494, 'min': 0.0, '25%': 0.0, '50%': 1.0, '75%': 1.0, 'max': 1.0}}
+2025-01-26 11:18:21.110 | INFO     | __main__:<module>:94 - fetch_and_save_excel script completed successfully.
+2025-01-26 11:18:23.010 | INFO     | utils_logger:<module>:41 - Logging to file: logs\project_log.log
+2025-01-26 11:18:23.010 | INFO     | __main__:<module>:91 - Starting fetch_and_save_excel script.
+2025-01-26 11:18:23.011 | INFO     | __main__:fetch_and_save_excel:28 - Ensured the output folder exists at C:\44608 projects spring 2025\datafun-03-projects\data\example_data.
+2025-01-26 11:18:23.012 | INFO     | __main__:fetch_and_save_excel:30 - Output file path set to C:\44608 projects spring 2025\datafun-03-projects\data\example_data\mtcars.xlsx.
+2025-01-26 11:18:23.013 | INFO     | __main__:fetch_and_save_excel:34 - Attempting to fetch dataset from https://raw.githubusercontent.com/selva86/datasets/master/mtcars.csv.
+2025-01-26 11:18:23.149 | INFO     | __main__:fetch_and_save_excel:39 - Dataset fetched successfully.
+2025-01-26 11:18:23.246 | INFO     | __main__:fetch_and_save_excel:43 - Excel file created and saved successfully at C:\44608 projects spring 2025\datafun-03-projects\data\example_data\mtcars.xlsx.
+2025-01-26 11:18:23.254 | INFO     | __main__:log_excel_metrics:72 - Excel Metrics:
+2025-01-26 11:18:23.254 | INFO     | __main__:log_excel_metrics:73 - -----------------------
+2025-01-26 11:18:23.254 | INFO     | __main__:log_excel_metrics:74 - Total Rows: 32
+2025-01-26 11:18:23.254 | INFO     | __main__:log_excel_metrics:75 - Total Columns: 14
+2025-01-26 11:18:23.255 | INFO     | __main__:log_excel_metrics:76 - Numeric Summaries: {'mpg': {'count': 32.0, 'mean': 4.4347697262865164, 'std': 0.6611368311355733, 'min': 3.22490309931942, '25%': 3.92743238723533, '50%': 4.38178046004133, '75%': 4.77493455452533, 'max': 5.82237065120385}, 'cyl': {'count': 32.0, 'mean': 6.1875, 'std': 1.7859216469465444, 'min': 4.0, '25%': 4.0, '50%': 6.0, '75%': 8.0, 'max': 8.0}, 'disp': {'count': 32.0, 'mean': 230.72187499999998, 'std': 123.93869383138194, 'min': 71.1, '25%': 120.825, '50%': 196.3, '75%': 326.0, 'max': 472.0}, 'hp': {'count': 32.0, 'mean': 146.6875, 'std': 68.56286848932059, 'min': 52.0, '25%': 96.5, '50%': 123.0, '75%': 180.0, 'max': 335.0}, 'drat': {'count': 32.0, 'mean': 3.5965625, 'std': 0.5346787360709715, 'min': 2.76, '25%': 3.08, '50%': 3.6950000000000003, '75%': 3.92, 'max': 4.93}, 'wt': {'count': 32.0, 'mean': 3.2172500000000004, 'std': 0.9784574429896966, 'min': 1.513, '25%': 2.58125, '50%': 3.325, '75%': 3.61, 'max': 5.424}, 'qsec': {'count': 32.0, 'mean': 17.848750000000003, 'std': 1.7869432360968431, 'min': 14.5, '25%': 16.8925, '50%': 17.71, '75%': 18.9, 'max': 22.9}, 'vs': {'count': 32.0, 'mean': 0.4375, 'std': 0.5040161287741853, 'min': 0.0, '25%': 0.0, '50%': 0.0, '75%': 1.0, 'max': 1.0}, 'am': {'count': 32.0, 'mean': 0.40625, 'std': 0.49899091723584604, 'min': 0.0, '25%': 0.0, '50%': 0.0, '75%': 1.0, 'max': 1.0}, 'gear': {'count': 32.0, 'mean': 3.6875, 'std': 0.7378040652569471, 'min': 3.0, '25%': 3.0, '50%': 4.0, '75%': 4.0, 'max': 5.0}, 'carb': {'count': 32.0, 'mean': 2.8125, 'std': 1.6151999776318522, 'min': 1.0, '25%': 2.0, '50%': 2.0, '75%': 4.0, 'max': 8.0}, 'fast': {'count': 32.0, 'mean': 0.6875, 'std': 0.47092907485988494, 'min': 0.0, '25%': 0.0, '50%': 1.0, '75%': 1.0, 'max': 1.0}}
+2025-01-26 11:18:23.257 | INFO     | __main__:<module>:94 - fetch_and_save_excel script completed successfully.
+2025-01-26 11:18:23.680 | INFO     | utils_logger:<module>:41 - Logging to file: logs\project_log.log
+2025-01-26 11:18:23.680 | INFO     | __main__:<module>:89 - Starting kersha_get_json script.
+2025-01-26 11:18:23.681 | INFO     | __main__:convert_csv_to_json:25 - Ensured the output folder exists at C:\44608 projects spring 2025\datafun-03-projects\data\example_data.
+2025-01-26 11:18:23.681 | INFO     | __main__:convert_csv_to_json:27 - Output file path set to C:\44608 projects spring 2025\datafun-03-projects\data\example_data\mtcars_metrics.json.
+2025-01-26 11:18:23.681 | INFO     | __main__:convert_csv_to_json:36 - Attempting to read CSV file from C:\44608 projects spring 2025\datafun-03-projects\data\example_data\mtcars.csv.
+2025-01-26 11:18:23.684 | INFO     | __main__:convert_csv_to_json:38 - CSV file read successfully.
+2025-01-26 11:18:23.685 | INFO     | __main__:convert_csv_to_json:47 - Calculating metrics for the dataset.
+2025-01-26 11:18:23.687 | INFO     | __main__:convert_csv_to_json:77 - Metrics JSON file created successfully at C:\44608 projects spring 2025\datafun-03-projects\data\example_data\mtcars_metrics.json.
+2025-01-26 11:18:23.689 | INFO     | __main__:<module>:92 - kersha_get_json script completed successfully.
+2025-01-26 11:18:24.100 | INFO     | utils_logger:<module>:41 - Logging to file: logs\project_log.log
+2025-01-26 11:18:24.101 | INFO     | __main__:<module>:83 - Starting save_mtcars_as_text script.
+2025-01-26 11:18:24.101 | INFO     | __main__:save_mtcars_as_text:24 - Ensured the output folder exists at C:\44608 projects spring 2025\datafun-03-projects\data\example_data.
+2025-01-26 11:18:24.102 | INFO     | __main__:save_mtcars_as_text:26 - Output file path set to C:\44608 projects spring 2025\datafun-03-projects\data\example_data\mtcars.txt.
+2025-01-26 11:18:24.102 | INFO     | __main__:save_mtcars_as_text:34 - Attempting to read CSV file from C:\44608 projects spring 2025\datafun-03-projects\data\example_data\mtcars.csv.
+2025-01-26 11:18:24.105 | INFO     | __main__:save_mtcars_as_text:36 - CSV file read successfully.
+2025-01-26 11:18:24.111 | INFO     | __main__:save_mtcars_as_text:41 - Text file saved successfully at C:\44608 projects spring 2025\datafun-03-projects\data\example_data\mtcars.txt.
+2025-01-26 11:18:24.112 | INFO     | __main__:calculate_text_metrics:67 - Processed Text Metrics for C:\44608 projects spring 2025\datafun-03-projects\data\example_data\mtcars.txt:
+2025-01-26 11:18:24.112 | INFO     | __main__:calculate_text_metrics:68 - -----------------------
+2025-01-26 11:18:24.113 | INFO     | __main__:calculate_text_metrics:69 - Total Lines: 33
+2025-01-26 11:18:24.113 | INFO     | __main__:calculate_text_metrics:70 - Total Words: 530
+2025-01-26 11:18:24.113 | INFO     | __main__:calculate_text_metrics:71 - Total Characters: 3563
+2025-01-26 11:18:24.114 | INFO     | __main__:<module>:86 - save_mtcars_as_text script completed successfully.
